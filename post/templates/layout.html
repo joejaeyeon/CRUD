@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en|ko">
+<head>
+    <link rel="stylesheet" href="{% static 'layout.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+</head>
+<body>
+    <h1><a href="/post">My Post</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/post/new">글쓰기</a></li>
+        </ul>
+    </nav>
+    {% block postblock %}
+    {% endblock %}
+</body>
+</html>

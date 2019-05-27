@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block postblock %}
+
+<h1>전체 포스트</h1>
+<a href="/post/new">글쓰기</a>
+{% for post in posts %}
+<div>
+  <h2><a href="/post/show/{{ post.id }}">{{ post.title }}</a></h2>
+  <p>{{ post.created_at }}</p>
+  <a href="/post/edit/{{ post.id }}">수정</a>
+  <a href="/post/delete/{{ post.id }}">삭제</a>
+</div>
+{% endfor %}
+
+{% endblock %}
